@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="description" content="Conjetura de Collatz">
+		<meta name="keywords" content="Conjetura de Collatz, Collatz, conjetura de Ulam, problema de Kakutani, conjetura de Thwaites, algoritmo de Hasse, problema de Siracusa, conjetura 3n+1, Collatz conjecture, Ulam conjecture, Kakutani's problem, Thwaites conjecture, Hasse's algorithm, Syracuse problem, 3n+1 conjecture, gráfica, graph">
+		<meta name="author" content="Saúl Ortega">
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/comun.css">
+	</head>
+	<body style="background-color: #FDFDFD">
+		<div class="container">
+			<div style="text-align: center; margin-top: 20px; margin-bttom: 10px;">
+				<h1>Conjetura de Collatz</h1>
+			</div>
+
+			<div class="row" style="margin: 40px 15px 40px 15px;">
+				<div class="col-xs-12">
+					<div class="input-group">
+						<input type="number" class="form-control" id="número" min="1" step="1" autofocus="true" onchange="conjetura.iniciar()" placeholder="Ingrese un número natural mayor a 1">
+						<span class="input-group-btn">
+							<button class="btn btn-info" type="button">Calcular</button>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="alert alert-warning" role="alert" id="aviso" style="display: none;"></div>
+
+			<hr>
+
+			<div class="col-md-4 col-sm-6" style="text-align: center; height: 180px;">
+				<div class="caja caja-fija">
+					<h4>Número inicial:</h4>
+					<span id="numero-inicial" style="font-size: 500%; color: grey;"></span>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6" style="text-align: center; height: 180px;">
+				<div class="caja caja-fija">
+					<h4>Cantidad de iteraciones:</h4>
+					<span id="cantidad-iteraciones" style="font-size: 500%; color: grey;"></span>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-12" style="text-align: center;">
+				<div class="caja caja-fija">
+					<h4>Muestras:</h4>
+					<span id="resultados"></span>
+				</div>
+			</div>
+
+			<div class="col-xs-12" style="display:none">
+				<div class="caja" id="contenedor-gráfica">
+					<canvas id="gráfica" height="100"></canvas>
+				</div>
+			</div>
+
+			<div style="margin:30px;">&nbsp;</div>
+			
+		</div>
+
+		<script src="./js/jquery-3.0.0.min.js"></script>
+		<script src="./js/Chart.min.js"></script>
+		<script src="./js/comun.js"></script>
+
+	</body>
+</html>
